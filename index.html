@@ -163,7 +163,7 @@ function build(g){
   requestAnimationFrame(()=>requestAnimationFrame(()=>bd.classList.remove('nt')));
 }
 function layout(){
-  size=Math.min(innerWidth-24,440);cell=size/N;
+  size=Math.max(160,Math.min(innerWidth-24,440));cell=size/N;
   $('wrap').style.width=size+'px';bd.style.width=bd.style.height=size+'px';
   bd.querySelectorAll('.t').forEach(e=>{e.style.width=e.style.height=(cell-4)+'px';e.style.fontSize=(cell*.4)+'px'});
 }
